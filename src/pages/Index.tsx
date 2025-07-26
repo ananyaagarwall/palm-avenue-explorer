@@ -1,12 +1,19 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { PropertyHeader } from "@/components/PropertyHeader";
+import { PropertyHero } from "@/components/PropertyHero";
+import { BuilderProfile } from "@/components/BuilderProfile";
+import { PropertyConfigurations } from "@/components/PropertyConfigurations";
+import { FloorPlansSection } from "@/components/FloorPlansSection";
+import { PropertyShowcase } from "@/components/PropertyShowcase";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <PropertyHeader />
+      <PropertyHero />
+      <BuilderProfile />
+      <PropertyConfigurations />
+      <FloorPlansSection />
+      <PropertyShowcase />
     </div>
   );
 };
