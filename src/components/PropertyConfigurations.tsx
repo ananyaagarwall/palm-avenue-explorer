@@ -43,7 +43,7 @@ const configurations = [
 
 export const PropertyConfigurations = () => {
   return (
-    <section className="px-16 py-12">
+    <section className="px-16 py-12 bg-background">
       {/* Section Header */}
       <div className="flex items-center gap-4 mb-8">
         <div className="w-12 h-0.5 bg-muted-foreground" />
@@ -52,10 +52,24 @@ export const PropertyConfigurations = () => {
         </h2>
       </div>
 
+      {/* Search Tabs */}
+      <div className="flex justify-end mb-8">
+        <div className="relative bg-muted/30 rounded-full border border-muted p-1 inline-flex">
+          <button className="px-6 py-3 text-lg font-semibold text-muted-foreground font-body">
+            Search by Building
+          </button>
+          <div className="bg-white rounded-full shadow-card px-6 py-3">
+            <span className="text-lg font-bold text-navy font-body">
+              Search by Rooms
+            </span>
+          </div>
+        </div>
+      </div>
+
       {/* Configuration Cards */}
       <div className="grid lg:grid-cols-3 gap-6 mb-8">
-        {configurations.map((config) => (
-          <Card key={config.id} className="shadow-property overflow-hidden">
+        {configurations.map((config, index) => (
+          <Card key={config.id} className={`shadow-property overflow-hidden ${index === 2 ? 'border-2 border-accent' : ''}`}>
             {/* Badge */}
             <div className="relative">
               <div className="absolute top-4 left-4 z-10">
